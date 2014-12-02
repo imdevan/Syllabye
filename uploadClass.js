@@ -11,7 +11,7 @@ var cni = $("#class-name-input"),
 	taoli = $("#ta-off-loc-input"),
 	taohi = $("#ta-off-hrs-input"),
 	gdi = $("#grade-distro-input"),
-	ntsi = $("#class-notes-input");
+	syli = $("#syllabus-link-input");
 
 function clearClassInfo(){
 	cni.val("");
@@ -25,9 +25,9 @@ function clearClassInfo(){
 	taoli.val("");
 	taohi.val("");
 	gdi.val("");
-	ntsi.val("");
+	syli.val("");
 }
-function insertClassInfo(className, classWebPage, profName, profEmail, profOffLoc, profOffHours, taName, taEmail, taOffLoc, taOffHours, gradeDist, Notes){
+function insertClassInfo(className, classWebPage, profName, profEmail, profOffLoc, profOffHours, taName, taEmail, taOffLoc, taOffHours, gradeDist, syLink){
 
 	cni.val(className);
 	cwp.val(classWebPage);
@@ -40,5 +40,5 @@ function insertClassInfo(className, classWebPage, profName, profEmail, profOffLo
 	taoli.val(taOffLoc);
 	taohi.val(taOffHours);
 	gdi.val(gradeDist);
-	ntsi.val(Notes);
+	syli.val(syLink);
 }

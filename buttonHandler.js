@@ -6,6 +6,7 @@ var foregroundBg = $("#fore-ground-background"),
 	manuallyInputLink = $("#manual-input-link"),
 	acForm = $("#add-class-form"),
 	c436 = $("#class-c436"),
+	c411 = $("#class-c411"),
 	syURL = $("#syllabus-url-input");
 
 
@@ -59,6 +60,7 @@ $("#add-class-submit-button").click(function(){
 	closeClassPopUp();
 	clearClassInfo();
 	c436.fadeIn();
+	c411.fadeIn();
 });
 
 manuallyInputLink.click(function(){
