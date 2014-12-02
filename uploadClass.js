@@ -13,6 +13,20 @@ var cni = $("#class-name-input"),
 	gdi = $("#grade-distro-input"),
 	ntsi = $("#class-notes-input");
 
+function clearClassInfo(){
+	cni.val("");
+	cwp.val("");
+	pni.val("");
+	pei.val("");
+	poli.val("");
+	pohi.val("");
+	tani.val("");
+	taei.val("");
+	taoli.val("");
+	taohi.val("");
+	gdi.val("");
+	ntsi.val("");
+}
 function insertClassInfo(className, classWebPage, profName, profEmail, profOffLoc, profOffHours, taName, taEmail, taOffLoc, taOffHours, gradeDist, Notes){
 
 	cni.val(className);

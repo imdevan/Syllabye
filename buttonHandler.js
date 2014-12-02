@@ -49,20 +49,24 @@ function closeClassPopUp(){
 
 $("#add-class-exit-button").click(function(){
 	closeClassPopUp();
+	clearClassInfo();
 });
 $("#add-class-cancel-button").click(function(){
 	closeClassPopUp();
+	clearClassInfo();
 });
 $("#add-class-submit-button").click(function(){
 	closeClassPopUp();
+	clearClassInfo();
 	c436.fadeIn();
 });
 
 manuallyInputLink.click(function(){
+	clearClassInfo();
 	acForm.fadeIn();	
 });
 getInfoBtn.click(function(){
-	alert("syurl val = " + syURL.val());
+	clearClassInfo();
 	if(syURL.val() == "http://www.csdl.tamu.edu/~shipman/courses/cpsc436/home.html"){
 			insertClassInfo("CPSC 436: Computer-Human Interaction",
 							"http://www.csdl.tamu.edu/~shipman/courses/cpsc436/home.html",
@@ -71,10 +75,25 @@ getInfoBtn.click(function(){
 							"HRBB 404",
 							"TBA, or by appointment",
 							"Gabriel Dzodom",
-							"",
+							"",	
 							"",
 							"",
 							"Exams 40%  Team project            25% Short assignments  25% Class participation     10%",
+		  ""
+		   );
+		}
+		else if(syURL.val() == "https://parasol.tamu.edu/~welch/teaching/411.f14/"){
+			insertClassInfo("CSCE 411-500: Design and Analysis of Algorithms",
+							"https://parasol.tamu.edu/~welch/teaching/411.f14/",
+							"Dr. Jennifer Welch", 
+							"welch@cs.tamu.edu", 
+							"HRBB 425G",
+							"T 2-3:30pm, R 2:00-3:30 (oba)",
+							"Yin Qu",
+							"quyin@cs.tamu.edu",	
+							"Teague 225C (knock on door)",
+							"T 10-11:30am, R 10am-noon",
+							"Weekly Quizzes 10%; Homeworks 30%; Culture Reports 10%; Exams 15%; Final 20%",
 		  ""
 		   );
 		}
