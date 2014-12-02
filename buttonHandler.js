@@ -1,12 +1,12 @@
 // This is the buttonhandler it handles the reaction of each of the uttons on the page. 
-foregroundBg = $("#fore-ground-background");
-upcomingPu = $("#upcoming-assignments-pop-up");
-addClassPu = $("#add-class-pop-up");
-getInfoBtn = $("#get-info-button");
-manuallyInputLink = $("#manual-input-link");
-acForm = $("#add-class-form");
-c436 = $("#class-c436"),
-syURL = $("#syllabus-url-input");
+var foregroundBg = $("#fore-ground-background"),
+	upcomingPu = $("#upcoming-assignments-pop-up"),
+	addClassPu = $("#add-class-pop-up"),
+	getInfoBtn = $("#get-info-button"),
+	manuallyInputLink = $("#manual-input-link"),
+	acForm = $("#add-class-form"),
+	c436 = $("#class-c436"),
+	syURL = $("#syllabus-url-input");
 
 
 // Resource Buttons .. Possibly not implemented
@@ -62,7 +62,7 @@ manuallyInputLink.click(function(){
 	acForm.fadeIn();	
 });
 getInfoBtn.click(function(){
-
+	alert("syurl val = " + syURL.val());
 	if(syURL.val() == "http://www.csdl.tamu.edu/~shipman/courses/cpsc436/home.html"){
 			insertClassInfo("CPSC 436: Computer-Human Interaction",
 							"http://www.csdl.tamu.edu/~shipman/courses/cpsc436/home.html",
@@ -79,10 +79,8 @@ getInfoBtn.click(function(){
 		   );
 		}
 
-		// if(syURL.val() == " ")
 
-
-	acForm.fadeIn();
+		acForm.fadeIn();
 
 });
 

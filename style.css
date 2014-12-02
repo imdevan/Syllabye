@@ -357,7 +357,7 @@ a:hover{text-decoration: underline;}
     /*display: none !important;*/
 }
 #add-class-pop-up{
-    display: block;
+    /*display: block;*/ 
 }
 .fore-ground-background{
     position: fixed;
@@ -368,7 +368,7 @@ a:hover{text-decoration: underline;}
     background-color: rgba(0,0,0,0.5);
 
 
-    display: block;
+    display: none;
 }
 
 .fore-ground-exit-button{
@@ -514,11 +514,13 @@ a:hover{text-decoration: underline;}
   /* layout */
   width:20em;
   padding: 0.25em;
+
   /* border */
   outline: none;
   border: none;
   border-bottom: 1px solid  #3299BB;
-    
+  background: transparent;
+  
   /* font */
   font-family: 'Lato', Arial, sans-serif;
   
