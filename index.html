@@ -10,9 +10,6 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
         <link rel='stylesheet' href='style.css'>
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-
         <title>Fall 2014</title>
         <link rel="shortcut icon" href="images/AMLogo.gif" />
         <link rel="shortcut icon" href="images/AMLogo.ico" />
@@ -24,9 +21,9 @@
             <nav>
                  <ul >
                     <h1 id="header"><font class="beatdown">Syllabye</font></h1>
-                    <li class="pure-menu-selected" class="menu-item"><a href="#">Dashboard</a></li>
-                    <li><a href="#" id="class-menu-item" class="menu-item">Class</a></li>
-                    <li><a href="#" id="account-menu-item" class="menu-item">Account</a></li>
+                    <!-- <li class="pure-menu-selected" class="menu-item"><a href="#">Dashboard</a></li> -->
+                    <!-- <li><a href="#" id="class-menu-item" class="menu-item">Class</a></li> -->
+                    <li><a  id="account-menu-item" class="menu-item">Hi, Devan</a></li>
                 </ul>
             </nav>
         </header>
@@ -52,7 +49,7 @@
                         <fieldset>
                             <div class="pure-g">
                                 <div class="pure-u-1">
-                                    <input id="syllabus-url" placeholder="syllabus url" type="text">
+                                    <input id="syllabus-url-input" placeholder="syllabus url" type="text">
                                     <button type="submit" class="pure-button pure-button-primary">Add Class</button>
                                 </div>
                             </div>
@@ -104,15 +101,6 @@
                     <b class="listTitle">This Week</b>
                         <!--Elearning-->
                        <table class="pure-table full-width">
-                           <!--  <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Make</th>
-                                    <th>Model</th>
-                                    <th>Year</th>
-                                </tr>
-                            </thead> -->
-
                             <tbody>
                                 <tr class="urgent">
                                     <td>436 - Project Update</td>
@@ -128,7 +116,22 @@
                                 </tr>
                             </tbody>
                         </table>
-                </div>
+
+                        <div class="button-wrapper">
+                            <span class="label-button2">
+                                <div class="cb-wrap">
+                                    <span class="circle-button bg-blue fa-pencil"></span>
+                                </div>
+                                <span class="label-button-label">Update</span>
+                            </span>
+                            <span class="label-button2" id="view-all-open-button">
+                                <div class="cb-wrap">
+                                    <span class="circle-button bg-green fa-align-justify"></span>
+                                </div>
+                                <span class="label-button-label">View All</span>
+                            </span>
+                        </div> <!-- Button Wrapper -->
+                </div> <!-- Module Content -->
             </div> <!-- Upcomming Notifications End -->
 
             <!--Class Documents-->
@@ -137,6 +140,7 @@
                     <b class="listTitle">Class Info</b>
 
                     <!--Software Engineering-->
+                    <div id="class-c436">
                         <p class="class ctitle c436" id="c436">
                             436 - Computer Human Interaction
                         </p>
@@ -160,7 +164,8 @@
                                     <div class="infoHeader c436"><h4>TA: </h4></div>
                                     <div class="infoSection">
                                         <p>
-                                            None.
+                                            Gabriel Dzodom<br>
+                                            Office Hours: (available by appointment)<br>
                                         </p>
                                     </div>
 
@@ -187,6 +192,7 @@
                         </li>
                     </ul>
 
+                </div>
                     <!--Computer Graphics-->
                     <p class="class ctitle c441" id="c441">
                         441 - Computer Graphics
@@ -307,6 +313,7 @@
                                         213A door code is 6012
                                     </p>
                                 </div>
+
                         </div> <!-- Class Info End -->
                     </div><!-- Info Wrapper End -->
 
@@ -385,7 +392,22 @@
                             <a href="http://ecampus.tamu.edu/" target="_blank" class="class e482">Course Page</a>
                         </li>
                     </ul>
-                </div>
+
+                            <div class="button-wrapper">
+                                <span class="label-button2">
+                                    <div class="cb-wrap">
+                                        <span class="circle-button bg-blue fa-pencil"></span>
+                                    </div>
+                                    <span class="label-button-label">Update Class</span>
+                                </span>
+                                <span class="label-button2" id="add-class-button" >
+                                    <div class="cb-wrap">
+                                        <span class="circle-button bg-green fa-plus"></span>
+                                    </div>
+                                    <span class="label-button-label">Add Class</span>
+                                </span>
+                            </div> <!-- Button Wrapper -->
+                </div> <!-- Module Content -->
             </div><!-- Class Documents End -->
 
         <!--Online Resources-->
@@ -408,10 +430,261 @@
                             <a href="https://piazza.com" target="_blank">Piazza</a>
                         </li>
                     </ul>
-                </div>
+
+                    <div class="button-wrapper">
+                        <span class="label-button2">
+                            <div class="cb-wrap">
+                                <span class="circle-button bg-blue fa-pencil"></span>
+                            </div>
+                            <span class="label-button-label">Update</span>
+                        </span>
+                        <span class="label-button2" id="re-open-all-button">
+                            <div class="cb-wrap">
+                                <span class="circle-button bg-green fa-arrow-right"></span>
+                            </div>
+                            <span class="label-button-label">Open All</span>
+                        </span>
+                    </div> <!-- Button Wrapper -->
+                </div> <!-- Module Content -->
             </div> <!-- Online Resources End -->
+
+        <!--All Upcoming Assignments-->
+            <div class="module fore-ground col1" id="upcoming-assignments-pop-up">
+                <span id="view-all-exit-button" class="fore-ground-exit-button fa-close"></span>
+                <div class="module-content">
+                    <b class="listTitle">All Assignments</b>
+                        <!--Elearning-->
+                       <table class="pure-table full-width">
+                            <tbody>
+                                <tr class="urgent">
+                                        <td>482 - Essay Final Submission </td>
+                                        <td>12/03/14</td>
+                                </tr>
+
+                                <tr class="urgent">
+                                        <td>436 - Final Project Presentations</td>
+                                        <td>12/04/14</td>
+                                </tr>
+
+                                <tr class="urgent">
+                                        <td>436 - Final Project Presentations</td>
+                                        <td>12/02/14</td>
+                                </tr>
+
+                                <tr class="urgent">
+                                        <td>454 - Homework 6</td>
+                                        <td>12/01/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Ray Tracer</td>
+                                        <td>11/21/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Exam II</td>
+                                        <td>11/20/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>454 - Homework 5</td>
+                                        <td>11/19/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Fractal and Iterated Function Systems</td>
+                                        <td>11/07/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>454 - Homework 4</td>
+                                        <td>11/07/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Assignment 3</td>
+                                        <td>10/28/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>454 - Homework 3 </td>
+                                        <td>10/24/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Exam I</td>
+                                        <td>10/21/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>482 - Midterm Exam </td>
+                                        <td>10/20/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Fractal and Iterated Function Systems</td>
+                                        <td>10/17/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Assignment 2</td>
+                                        <td>10/07/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Polygon Scan Conversion and Clipping</td>
+                                        <td>10/03/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>454 - Homework 2</td>
+                                        <td>10/03/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Project Progress Reports</td>
+                                        <td>09/30/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>454 - Homework 1</td>
+                                        <td>09/26/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Linear Algebra Review</td>
+                                        <td>09/17/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>436 - Assignment 1</td>
+                                        <td>09/16/14</td>
+                                </tr>
+
+                                <tr class="past due">
+                                        <td>441 - Sinple Paint Program</td>
+                                        <td>09/12/14</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                </div><!-- Module Content -->
+
+            </div> <!-- Assignment List Pop Up -->
+
+            <div id="fore-ground-background" class="fore-ground-background">
+            </div>
+
+            <!--Add Class Pop UP-->
+            <div class="module fore-ground col1" id="add-class-pop-up"> 
+                <span id="add-class-exit-button" class="fore-ground-exit-button fa-close"></span>
+                    <div class="module-content">
+                    <b class="listTitle">Add Class</b>
+
+                    <div id="add-class-get-started" class="col1">
+                        <div class="row5">
+                            <input class="bottom-border-input" id="syllabus-url" type="text" placeholder="Paste your class syllabus here...">
+                            <a id="manual-input-link" class="blue-link"> or manually input your class information</a>
+                        </div>
+                        <div class="row5">
+                            <button id="get-info-button" type="button" class="pure-button bg-green floating-button">Get Started</button>
+                        </div>
+                    </div>
+
+                    <form id="add-class-form" class="pure-form pure-form-stacked">
+                        <fieldset>
+
+
+
+                            <div class="pure-g">
+                                <div class="info-section">
+                                    <div class="col2 left">
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="class-name">Class Name</label>
+                                            <input name="class-name-input" id="class-name-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="class-web-page">Class Web Page</label>
+                                            <input name="class-web-page-input" id="class-web-page-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="prof-name">Proffessor Name</label>
+                                            <input name="prof-name-input" id="prof-name-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="prof-email">Proffessor Email</label>
+                                            <input name="prof-email" id="prof-email-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="city">Proffessor Office Location</label>
+                                            <input name="prof-email" id="prof-off-loc-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label id="prof-off-hrs-input">Proffessor Office Hours</label>
+                                            <input name="prof-off-hrs-input" id="prof-off-hrs-input" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col2 left">
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="ta-name-input">TA Name</label>
+                                            <input name="ta-name-input" id="ta-name-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="ta-email-input">TA Email</label>
+                                            <input name="ta-email-input" id="ta-email-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="ta-office-loc-input">TA Office Location</label>
+                                            <input name="ta-office-loc-input"  id="ta-office-loc-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="ta-office-hrs-input">TA Office Hours</label>
+                                            <input name="ta-office-hrs-input"  id="ta-office-hrs-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="grade-distro-input">Grade Distribution</label>
+                                            <input name="grade-distro-input" id="grade-distro-input" type="text">
+                                        </div>
+
+                                        <div class="pure-u-1 pure-u-sm-1-3">
+                                            <label for="class-notes-input">Notes</label>
+                                            <input name="class-notes-input"  id="class-notes-input" type="text">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row5 not-center">
+                                <div class="col2-mod">
+                                    <button id="add-class-submit-button" type="button" class="bg-green floating-button pure-button">Submit</button>
+                                </div>
+                                <div class="col2-mod">
+                                    <button id="add-class-cancel-button"type="button" class="bg-red floating-button pure-button">Cancel</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div> <!-- Module Content -->
+            </div> <!-- Add Class Pop Up -->
 
 
         </section>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="uploadClass.js"></script>
+        <script type="text/javascript" src="buttonHandler.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+
+
     </body>
 </html>
